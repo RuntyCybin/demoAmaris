@@ -2,39 +2,31 @@ package com.amaris.demoAmaris.model;
 
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 @Entity
 @Table(name = "prices")
 public class Price {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
     private int brandID;
 
     @Column
-    private Date startDate;
+    private Date startdate;
 
     @Column
-    private Date endDate;
+    private Date enddate;
 
     @Column
-    private int priceListID;
+    private int pricelistID;
 
     @Column
     private int productID;
@@ -42,7 +34,7 @@ public class Price {
     @Column
     private int priority;
 
-    @Column 
+    @Column
     private double price;
 
     @Column

@@ -1,18 +1,14 @@
 package com.amaris.demoAmaris.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
-@Getter
-@Setter
-@ToString
+import java.util.Date;
+
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class InputValuesDto {
-    private String fecha;
+    private Date fecha;
     private int productId;
     private int cadenaId;
 }
